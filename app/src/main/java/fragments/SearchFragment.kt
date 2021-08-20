@@ -14,11 +14,12 @@ class SearchFragment : Fragment() {
     private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
 
+
     override fun onResume() {
         super.onResume()
         val cities = resources.getStringArray(R.array.Cities)
         val arrayAdapter = ArrayAdapter(requireContext(), R.layout.drop_down_item, cities)
-        binding.autoCompleteTextView1.setAdapter(arrayAdapter)
+        binding.autoCompleteTextView.setAdapter(arrayAdapter)
     }
 
     override fun onCreateView(

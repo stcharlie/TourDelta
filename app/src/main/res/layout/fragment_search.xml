@@ -11,29 +11,29 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInput"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-        android:layout_width="366dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="24dp"
-        app:startIconDrawable="@drawable/ic_search"
+        android:id="@+id/search"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#3C64F8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
-            android:id="@+id/autoCompleteTextView1"
+            android:id="@+id/autoCompleteTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="15dp"
-            android:paddingBottom="15dp"
+            android:layout_height="match_parent"
+            android:drawableStart="@drawable/ic_search24"
+            android:text="Find Destination"
+            android:backgroundTint="#3C64F8"
+            android:textColor="#3C64F8"
+            android:paddingStart="10dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
             android:layout_weight="1"
-            android:hint="Find Destination"
-            android:textStyle="normal"
-            android:inputType="textAutoComplete"
-            android:fontFamily="@font/poppins"/>
+             />
+
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -52,22 +52,24 @@
         android:textStyle="bold"
         app:flow_verticalAlign="top"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInput" />
+        app:layout_constraintTop_toBottomOf="@+id/search" />
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="24dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:listitem="@layout/location_item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/searchLocation"
+        app:layout_constraintVertical_bias="0.0"
+        app:spanCount="2"
+        tools:listitem="@layout/location_item" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
