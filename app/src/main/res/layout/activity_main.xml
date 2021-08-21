@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu"
         app:itemIconSize="30dp"
-        app:itemIconTint="#5F90F3"
+        app:itemIconTint="@color/bottom_tool_color"
         app:itemTextColor="#5F90F3"
         />
 
